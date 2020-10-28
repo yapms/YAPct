@@ -1,0 +1,7 @@
+body {
+	text-align: center;
+}
+
+#compass_canvas {
+	display: none;
+}
