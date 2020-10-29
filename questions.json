@@ -1,6 +1,6 @@
 {
 	"1": {
-		"text": "Universal health care is epicness.",
+		"text": "Universal health care is good.",
 		"strongly agree": {
 			"economy": -1,
 			"social": 0	
@@ -58,4 +58,24 @@
 			"social": 0
 		}
 	}
+	
+	"4": {
+		"text": "Death penalty is needed.",
+		"strongly agree": {
+			"economy": 0,
+			"social": 0	
+		},
+		"agree": {
+			"economy": 0,
+			"social": 0
+		},
+		"disagree": {
+			"economy": 0,
+			"social": 0
+		},
+		"strongly disagree": {
+			"economy": 0,
+			"social": 0
+		}
+	},
 }
