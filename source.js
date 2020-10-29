@@ -7,10 +7,10 @@ const answers = ["Strongly Agree", "Agree", "Disagree", "Strongly Disagree"];
 var questionData;
 
 function calculateResult() {
-	var left = 1;
-	var right = 1;
-	var up = 1;
-	var down = 1;
+	var left = 0;
+	var right = 0;
+	var up = 0;
+	var down = 0;
 	const question_forms = document.getElementsByClassName("question_form");
 	const length = question_forms.length;
 	for(var index = 0; index < length; ++index) {
@@ -35,12 +35,19 @@ function calculateResult() {
 		}
 	}
 
-	const x = (right - left) * 10 / (left + right);
-	const y = (up - down) * 10 / (up + down);
+	var x = 0;
+	var y = 0;
+	var denominator = left + right;
+	if(denominator !== 0) {
+		x = (right - left) * 10 / (left + right);
+	}
+	denominator = up + down;
+	if(denominator !== 0) {
+		y =  (up - down) * 10 / (up + down);
+	}
 	
 	createGrid();
 	createPosition(x, y);
-
 }
 
 function answerQuestion(question, answer) {
