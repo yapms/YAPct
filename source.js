@@ -7,7 +7,40 @@ const answers = ["Strongly Agree", "Agree", "Disagree", "Strongly Disagree"];
 var questionData;
 
 function calculateResult() {
+	var left = 1;
+	var right = 1;
+	var up = 1;
+	var down = 1;
+	const question_forms = document.getElementsByClassName("question_form");
+	const length = question_forms.length;
+	for(var index = 0; index < length; ++index) {
+		const form = question_forms[index];
+		for(var answer_index = 0; answer_index < 4; ++answer_index) {
+			const input = form.childNodes[answer_index * 2];
+			if(input.checked === true) {
+				var social = parseFloat(input.getAttribute("social"));
+				if(social < 0) {
+					down += social * -1;
+				} else {
+					up += social;
+				}
+				var economic = parseFloat(input.getAttribute("economic"));
+				if(economic < 0) {
+					left += economic * -1;
+				} else {
+					right += economic 
+				}
+				break;
+			}
+		}
+	}
+
+	const x = (right - left) * 10 / (left + right);
+	const y = (up - down) * 10 / (up + down);
 	
+	createGrid();
+	createPosition(x, y);
+
 }
 
 function answerQuestion(question, answer) {
@@ -21,6 +54,7 @@ function answerQuestion(question, answer) {
 			label.style.background = "#ffffff";
 		}
 	}
+	calculateResult();
 }
 
 function loadQuestions() {
@@ -37,12 +71,15 @@ function loadQuestions() {
 			questionDiv.append(questionHeader);
 
 			const form = document.createElement("form");
+			form.setAttribute("class", "question_form");
+			form.setAttribute("question_number", new String(question));
 			for(var index = 0; index < 4; ++index) {
 				const button = document.createElement("input");
 				button.setAttribute("type", "radio");
 				button.setAttribute("id", new String(question) + new String(index));
-				button.setAttribute("social", "-1");
-				button.setAttribute("economic", "1");
+				console.log(answers[index].toLowerCase());
+				button.setAttribute("social", json[question][answers[index].toLowerCase()]["social"]);
+				button.setAttribute("economic", json[question][answers[index].toLowerCase()]["economy"]);
 				button.setAttribute("class", "answer_button");
 				button.setAttribute("name", new String(question));
 				button.style.display = "none";
@@ -110,8 +147,6 @@ function createGrid() {
 
 function main() {
 	createGrid();
-	createPosition(0, 0);
-	createPosition(8.5, 8);
 	loadQuestions();
 }
 

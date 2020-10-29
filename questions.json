@@ -3,18 +3,18 @@
 		"text": "Are you a commie?",
 		"strongly agree": {
 			"economy": -1,
-			"social": 1	
+			"social": 0	
 		},
 		"agree": {
 			"economy": -0.5,
-			"social": 0.5	
+			"social": 0	
 		},
 		"disagree": {
-			"economy": 0,
+			"economy": 0.5,
 			"social": 0
 		},
 		"strongly disagree": {
-			"economy": 0.5,
+			"economy": 1,
 			"social": 0
 		}
 	},
@@ -23,19 +23,19 @@
 		"text": "Are you a fascist?",
 		"strongly agree": {
 			"economy": 0,
-			"social": 4	
+			"social": 1	
 		},
 		"agree": {
 			"economy": 0,
-			"social": 3	
+			"social": 0.75	
 		},
 		"disagree": {
 			"economy": 0,
-			"social": 1
+			"social": 0.25
 		},
 		"strongly disagree": {
 			"economy": 0,
-			"social": -1
+			"social": 0
 		}
 	}
 }
