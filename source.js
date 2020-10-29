@@ -119,8 +119,9 @@ function createPosition(x, y) {
 	y *= -1;
 	y += 10;
 	ctx.fillStyle = "#ff0000";
+	ctx.lineWidth = 5;
 	ctx.beginPath();
-	ctx.arc(x * (width / 20), y * (height / 20), (width/20) / 3, 0, 2 * Math.PI);
+	ctx.arc(x * (width / 20), y * (height / 20), (width/20) / 2.5, 0, 2 * Math.PI);
 	ctx.stroke();
 	ctx.fill();
 }
@@ -136,7 +137,7 @@ function createGrid() {
 	ctx.fillStyle = "#55ee55";
 	ctx.fillRect(0, height/2, width/2, height/2);
 
-	ctx.fillStyle = "#ee55ee";
+	ctx.fillStyle = "#eeee55";
 	ctx.fillRect(width/2, height/2, width/2, height/2);
 
 	ctx.lineWidth = 2;
