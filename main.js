@@ -1,8 +1,3 @@
-const canvas = document.getElementById("compass");
-var ctx = canvas.getContext("2d");
-const width = canvas.width;
-const height = canvas.height;
-
 const answers = ["Strongly Agree", "Agree", "Disagree", "Strongly Disagree"];
 var questionData;
 
@@ -112,45 +107,6 @@ function loadQuestions() {
 			questions.append(questionDiv);
 		}
 	});
-}
-
-function createPosition(x, y) {
-	x += 10;
-	y *= -1;
-	y += 10;
-	ctx.fillStyle = "#ff0000";
-	ctx.lineWidth = 5;
-	ctx.beginPath();
-	ctx.arc(x * (width / 20), y * (height / 20), (width/20) / 2.5, 0, 2 * Math.PI);
-	ctx.stroke();
-	ctx.fill();
-}
-
-function createGrid() {
-
-	ctx.fillStyle = "#ee5555";
-	ctx.fillRect(0,0, width/2, height/2);
-
-	ctx.fillStyle = "#5555ee";
-	ctx.fillRect(width/2, 0, width/2, height/2);
-
-	ctx.fillStyle = "#55ee55";
-	ctx.fillRect(0, height/2, width/2, height/2);
-
-	ctx.fillStyle = "#eeee55";
-	ctx.fillRect(width/2, height/2, width/2, height/2);
-
-	ctx.lineWidth = 2;
-	ctx.beginPath();
-	for(var index = 0; index < 21; ++index) {
-		var xpos = index * (width / 20);
-		ctx.moveTo(xpos, 0);
-		ctx.lineTo(xpos, height);
-		var ypos = index * (height / 20);
-		ctx.moveTo(0, ypos);
-		ctx.lineTo(width, ypos);
-	}
-	ctx.stroke();
 }
 
 function main() {
