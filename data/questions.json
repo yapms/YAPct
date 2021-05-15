@@ -1,0 +1,232 @@
+{
+	"1": {
+		"text": "Universal health care is epicness.",
+		"strongly agree": {
+			"economy": -1,
+			"social": 0.5	
+		},
+		"agree": {
+			"economy": -0.5,
+			"social": 0	
+		},
+		"disagree": {
+			"economy": 0.5,
+			"social": 0
+		},
+		"strongly disagree": {
+			"economy": 1,
+			"social": 0
+		}
+	},
+
+	"2": {
+		"text": "The more free the market, the more free the people.",
+		"strongly agree": {
+			"economy": 1,
+			"social": 0	
+		},
+		"agree": {
+			"economy": 0.75,
+			"social": 0
+		},
+		"disagree": {
+			"economy": 0,
+			"social": 0
+		},
+		"strongly disagree": {
+			"economy": -0.25,
+			"social": 0
+		}
+	},
+	
+	"3": {
+		"text": "Communism is the worst economic system to ever be developed in the history of all of human kind and even before the god existed.",
+		"strongly agree": {
+			"economy": 1,
+			"social": 0.5	
+		},
+		"agree": {
+			"economy": 0.75,
+			"social": 0.25
+		},
+		"disagree": {
+			"economy": 0,
+			"social": -0.25
+		},
+		"strongly disagree": {
+			"economy": -0.25,
+			"social": -0.5
+		}
+	},
+	"4": {
+		"text": "Communism is bad.",
+		"strongly agree": {
+			"economy": 1,
+			"social": 0.5	
+		},
+		"agree": {
+			"economy": 0.75,
+			"social": 0.25
+		},
+		"disagree": {
+			"economy": 0,
+			"social": -0.25
+		},
+		"strongly disagree": {
+			"economy": -0.25,
+			"social": -0.5
+		}
+	},
+	"4": {
+		"text": "Communism is bad.",
+		"strongly agree": {
+			"economy": 1,
+			"social": 0.5	
+		},
+		"agree": {
+			"economy": 0.75,
+			"social": 0.25
+		},
+		"disagree": {
+			"economy": 0,
+			"social": -0.25
+		},
+		"strongly disagree": {
+			"economy": -0.25,
+			"social": -0.5
+		}
+	},
+	"5": {
+		"text": "Communism is bad.",
+		"strongly agree": {
+			"economy": 1,
+			"social": 0.5	
+		},
+		"agree": {
+			"economy": 0.75,
+			"social": 0.25
+		},
+		"disagree": {
+			"economy": 0,
+			"social": -0.25
+		},
+		"strongly disagree": {
+			"economy": -0.25,
+			"social": -0.5
+		}
+	},
+	"6": {
+		"text": "Communism is bad.",
+		"strongly agree": {
+			"economy": 1,
+			"social": 0.5	
+		},
+		"agree": {
+			"economy": 0.75,
+			"social": 0.25
+		},
+		"disagree": {
+			"economy": 0,
+			"social": -0.25
+		},
+		"strongly disagree": {
+			"economy": -0.25,
+			"social": -0.5
+		}
+	},
+	"7": {
+		"text": "Communism is bad.",
+		"strongly agree": {
+			"economy": 1,
+			"social": 0.5	
+		},
+		"agree": {
+			"economy": 0.75,
+			"social": 0.25
+		},
+		"disagree": {
+			"economy": 0,
+			"social": -0.25
+		},
+		"strongly disagree": {
+			"economy": -0.25,
+			"social": -0.5
+		}
+	},
+	"8": {
+		"text": "Communism is bad.",
+		"strongly agree": {
+			"economy": 1,
+			"social": 0.5	
+		},
+		"agree": {
+			"economy": 0.75,
+			"social": 0.25
+		},
+		"disagree": {
+			"economy": 0,
+			"social": -0.25
+		},
+		"strongly disagree": {
+			"economy": -0.25,
+			"social": -0.5
+		}
+	},
+	"9": {
+		"text": "Communism is bad.",
+		"strongly agree": {
+			"economy": 1,
+			"social": 0	
+		},
+		"agree": {
+			"economy": 0.75,
+			"social": 0
+		},
+		"disagree": {
+			"economy": 0,
+			"social": 0
+		},
+		"strongly disagree": {
+			"economy": -0.25,
+			"social": 0
+		}
+	},
+	"10": {
+		"text": "Communism is bad.",
+		"strongly agree": {
+			"economy": 1,
+			"social": 0	
+		},
+		"agree": {
+			"economy": 0.75,
+			"social": 0
+		},
+		"disagree": {
+			"economy": 0,
+			"social": 0
+		},
+		"strongly disagree": {
+			"economy": -0.25,
+			"social": 0
+		}
+	},
+	"11": {
+		"text": "Communism is bad.",
+		"strongly agree": {
+			"economy": 1,
+			"social": 0	
+		},
+		"agree": {
+			"economy": 0.75,
+			"social": 0
+		},
+		"disagree": {
+			"economy": 0,
+			"social": 0
+		},
+		"strongly disagree": {
+			"economy": -0.25,
+			"social": 0
+		}
+	}
+}
