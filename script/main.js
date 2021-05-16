@@ -3,6 +3,7 @@ import Grid from "./Grid.js";
 const answers = ["Strongly Agree", "Agree", "Disagree", "Strongly Disagree"];
 
 function calculateResult() {
+	console.log("Calculating Results");
 	let left = 0, right = 0, up = 0, down = 0;
 	const question_forms = document.getElementsByClassName("question_form");
 	const length = question_forms.length;
@@ -33,11 +34,12 @@ function calculateResult() {
 	let y = up + down !== 0 ?
 		(up - down) * 10 / (up + down) : 0;
 	
-	Grid.createGrid();
-	Grid.createPosition(x, y);
+	Grid.drawGrid();
+	Grid.drawPosition(x, y);
 }
 
 function answerQuestion(question, answer) {
+	console.log("Answering Question");
 	const questionDiv = document.getElementById(new String(question));
 	questionDiv.style.backgroundColor = "#88dd88";
 	for(let index = 0; index < 4; ++index) {
@@ -52,6 +54,7 @@ function answerQuestion(question, answer) {
 }
 
 function loadQuestions() {
+	console.log("Loading Questions");
 	const questions = document.getElementById("questions");
 	fetch("./data/questions.json")
 	.then(res => {
@@ -106,7 +109,8 @@ function loadQuestions() {
 }
 
 function main() {
-	Grid.createGrid();
+	Grid.initialize();
+	Grid.drawGrid();
 	loadQuestions();
 }
 

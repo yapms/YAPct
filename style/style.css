@@ -90,6 +90,11 @@ body {
 }
 
 @media (orientation: portrait) {
+	#main_header {
+		font-size: 1.5em;
+		padding: 0.25em;
+	}
+
 	#main_body {
 		flex-direction: column;
 		margin: 0;

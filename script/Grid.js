@@ -1,70 +1,69 @@
 export default class Grid {
-	static canvas = document.getElementById("compass");
-	static ctx = Grid.canvas.getContext("2d");
-	static axisColor = "#000000";
-	static axisWidth = 3;
 
-	static gridColor = "#000000";
-	static gridWidth = 2;
+	static initialize() {
+		console.log("Initialize Grid");
+		Grid.canvas = document.getElementById("compass");
+		Grid.ctx = Grid.canvas.getContext("2d");
+		Grid.width = Grid.canvas.width;
+		Grid.height = Grid.canvas.height;
+		Grid.axisColor = "#000000";
+		Grid.axisWidth = 3;
 
-	static borderColor = "#000000";
-	static borderWidth = 0;
+		Grid.gridColor = "#000000";
+		Grid.gridWidth = 2;
 
-	static libRightColor = "#eeee55";
-	static authRightColor = "#5555ee";
-	static libLeftColor = "#55ee55";
-	static authLeftColor = "#ee5555";
+		Grid.borderColor = "#000000";
+		Grid.borderWidth = 0;
 
-	static positionSize = 2.5;
-	static positionWidth = 5;
-	static positionColor = "#ff0000";
+		Grid.libRightColor = "#eeee55";
+		Grid.authRightColor = "#5555ee";
+		Grid.libLeftColor = "#55ee55";
+		Grid.authLeftColor = "#ee5555";
 
-	static resize(width, height) {
-		Grid.canvas.width = width;
-		Grid.canvas.height = height;
-
-		Grid.createGrid();
+		Grid.positionSize = 2.5;
+		Grid.positionWidth = 5;
+		Grid.positionColor = "#ff0000";
 	}
 
-	static createPosition(x, y) {
-		const width = Grid.canvas.width;
-		const height = Grid.canvas.height;
+	static drawPosition(x, y) {
+		console.log("Draw Position");
 		x += 10;
 		y *= -1;
 		y += 10;
 		Grid.ctx.fillStyle = Grid.positionColor;
 		Grid.ctx.lineWidth = Grid.positionWidth;
 		Grid.ctx.beginPath();
-		Grid.ctx.arc(x * (width / 20), y * (height / 20), (width/20) / Grid.positionSize, 0, 2 * Math.PI);
+		Grid.ctx.arc(x * (Grid.width / 20), y * (Grid.height / 20), 
+			(Grid.width/20) / Grid.positionSize, 0,
+			2 * Math.PI);
 		Grid.ctx.stroke();
 		Grid.ctx.fill();
 	}
 
-	static createGrid() {
-		const width = Grid.canvas.width;
-		const height = Grid.canvas.height;
+	static drawGrid() {
+		console.log("Draw Grid");
 		Grid.ctx.fillStyle = Grid.authLeftColor;
-		Grid.ctx.fillRect(0,0, width/2, height/2);
+		Grid.ctx.fillRect(0,0, Grid.width/2, Grid.height/2);
 
 		Grid.ctx.fillStyle = Grid.authRightColor;
-		Grid.ctx.fillRect(width/2, 0, width/2, height/2);
+		Grid.ctx.fillRect(Grid.width/2, 0, Grid.width/2, Grid.height/2);
 
 		Grid.ctx.fillStyle = Grid.libLeftColor;
-		Grid.ctx.fillRect(0, height/2, width/2, height/2);
+		Grid.ctx.fillRect(0, Grid.height/2, Grid.width/2, Grid.height/2);
 
 		Grid.ctx.fillStyle = Grid.libRightColor;
-		Grid.ctx.fillRect(width/2, height/2, width/2, height/2);
+		Grid.ctx.fillRect(Grid.width/2, Grid.height/2, Grid.width/2, Grid.height/2);
 
 		Grid.ctx.beginPath();
 		Grid.ctx.strokeStyle = Grid.gridColor;
 		Grid.ctx.lineWidth = Grid.gridWidth;
 		for(let index = 1; index < 20; ++index) {
-			let xpos = index * (width / 20);
+			const xpos = index * (Grid.width / 20);
 			Grid.ctx.moveTo(xpos, 0);
-			Grid.ctx.lineTo(xpos, height);
-			let ypos = index * (height / 20);
+			Grid.ctx.lineTo(xpos, Grid.height);
+			const ypos = index * (Grid.height / 20);
 			Grid.ctx.moveTo(0, ypos);
-			Grid.ctx.lineTo(width, ypos);
+			Grid.ctx.lineTo(Grid.width, ypos);
 		}
 		Grid.ctx.stroke();
 
@@ -72,10 +71,10 @@ export default class Grid {
 		Grid.ctx.lineWidth = Grid.axisWidth;
 
 		Grid.ctx.beginPath();
-		Grid.ctx.moveTo(0, height / 2);
-		Grid.ctx.lineTo(width, height / 2);
-		Grid.ctx.moveTo(width / 2, 0);
-		Grid.ctx.lineTo(width / 2, height);
+		Grid.ctx.moveTo(0, Grid.height / 2);
+		Grid.ctx.lineTo(Grid.width, Grid.height / 2);
+		Grid.ctx.moveTo(Grid.width / 2, 0);
+		Grid.ctx.lineTo(Grid.width / 2, Grid.height);
 		Grid.ctx.stroke();
 		
 		Grid.ctx.strokeStyle = Grid.borderColor;
