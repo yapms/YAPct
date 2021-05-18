@@ -40,52 +40,67 @@ function calculateResult() {
 
 function answerQuestion(question, answer) {
 	console.log("Answering Question");
-	const questionDiv = document.getElementById(new String(question));
+	const questionDiv = document.getElementById("q" + question);
 	questionDiv.style.backgroundColor = "#88dd88";
+
+	const answers = document.getElementById("q" + question + "f").elements;
+	for(const inputIndex in answers) {
+		console.log(inputIndex);
+	}
+
+	/* THIS NEEDS TO LOOP THROUGH ALL RADIO ELEMENTS REGARDLESS OF SIZE */
+	/*
 	for(let index = 0; index < 4; ++index) {
-		let label = document.getElementById("q" + question + "i" + index + "_label");
+		let label = document.getElementById("q" + question + "a" + answer + "_label");
 		if(index === answer) {
 			label.style.background = "#bbf";
 		} else {
 			label.style.background = "#ffffff";
 		}
 	}
+	*/
 	calculateResult();
 }
 
 function loadQuestions() {
 	console.log("Loading Questions");
-	const questions = document.getElementById("questions");
+	const questionsDiv  = document.getElementById("questions");
 	fetch("./data/questions.json")
 	.then(res => {
 		return res.json();
 	})
 	.then(json => {
-		for(const question in json) {
+		const questions = json["questions"];
+		for(const questionIndex in questions) {
+			const question = questions[questionIndex];
 			const questionDiv = document.createElement("div");
+			questionDiv.setAttribute("id", "q" + questionIndex);
 			questionDiv.setAttribute("class", "question");
-			questionDiv.setAttribute("id", new String(question));
 
 			const questionHeader = document.createElement("h3");
-			const questionHeaderText = document.createTextNode(json[question].text);
+			const questionHeaderText = document.createTextNode(question["text"]);
 			questionHeader.append(questionHeaderText);
 			questionDiv.append(questionHeader);
 
 			const form = document.createElement("form");
+			form.setAttribute("id", "q" + questionIndex + "f");
 			form.setAttribute("class", "question_form");
-			form.setAttribute("question_number", new String(question));
-			for(let index = 0; index < 4; ++index) {
+			form.setAttribute("question_number", "q" + questionIndex);
+
+			const answers = question["answers"];
+			for(const answerIndex in answers) {
+				const answer = answers[answerIndex];
 				const button = document.createElement("input");
+				button.setAttribute("id", "q" + new String(questionIndex) + "a" + new String(answerIndex));
 				button.setAttribute("type", "radio");
-				button.setAttribute("id", "q" + new String(question) + "i" + new String(index));
-				button.setAttribute("social", json[question][answers[index].toLowerCase()]["social"]);
-				button.setAttribute("economic", json[question][answers[index].toLowerCase()]["economy"]);
+				button.setAttribute("social", answer["social"]);
+				button.setAttribute("economic", answer["economy"]);
 				button.setAttribute("class", "answer_button");
-				button.setAttribute("name", new String(question));
+				button.setAttribute("name", "q" + questionIndex);
 				button.style.display = "none";
 				button.addEventListener("click", (function() {
-					const q = question;
-					const a = index;
+					const q = questionIndex;
+					const a = answerIndex;
 					return function() {
 						answerQuestion(q, a);
 					}
@@ -93,17 +108,17 @@ function loadQuestions() {
 				form.append(button);
 
 				const label = document.createElement("label");
-				label.setAttribute("for", "q" + new String(question) + "i" + new String(index));
-				label.setAttribute("id", "q" + new String(question) + "i" + new String(index) + "_label");
+				label.setAttribute("id", "q" + new String(questionIndex) + "a" + new String(answerIndex) + "_label");
+				label.setAttribute("for", "q" + new String(questionIndex) + "a" + new String(answerIndex));
 				label.setAttribute("class", "answer_label");
 
-				const text = document.createTextNode(answers[index]);
+				const text = document.createTextNode(answer["text"]);
 				label.append(text);
 				form.append(label);
 			}
 
 			questionDiv.append(form);
-			questions.append(questionDiv);
+			questionsDiv.append(questionDiv);
 		}
 	});
 }
