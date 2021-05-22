@@ -61,21 +61,23 @@ body {
 }
 
 #main_body {
-	flex: 1 1 auto;
 	display: flex;
-	margin: 0em;
-	margin-left: 1em;
 	flex-direction: row;
-	justify-content: center;
 	overflow: hidden;
+}
+
+#compass_container {
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+	align-self: center;
+	height: 100%;
 }
 
 #compass {
 	align-self: center;
-	border-radius: 15px;
-	max-width: 55vw;
-	max-height: 95%;
-	border: 2px solid black;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 #questions {
@@ -85,17 +87,19 @@ body {
 
 .question_form {
 	display: flex;
-	flex-direction: column;	
+	flex-direction: column;
+	margin: 0em;
 }
 
 .question {
-	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
 	transition: background 0.3s;
 	border: 2px solid black;
+	border-radius: 0.25em;
 	background: #e88;
 	margin: 0.75em;
 	padding: 0.25em;
-	border-radius: 0.5em;
 }
 
 .question h3 {
@@ -104,15 +108,14 @@ body {
 }
 
 .answer_label {
-	transition: background 0.2s;
+	transition: background 0.3s;
 	font-size: 1.2em;
 	user-select: none;
 	background: #ffffff;
-	border-radius: 0.5em;
 	border: 1px solid black;
+	border-radius: 0.25em;
 	margin: 0.2em;
-	padding: 0.2em;
-	white-space: nowrap;
+	padding: 0.1em;
 }
 
 .answer_button:checked+.answer_label{
@@ -137,14 +140,17 @@ body {
 		margin: 0;
 	}	
 
+	#compass_container {
+		flex-shrink: 1;
+	}
+
 	#compass {
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
-		max-width: 100vw;
-		max-height: 40%;
+		height: 95%;
+		width: 95%;
 	}
 	
 	#questions {
+		flex-grow: 1;
 		border-top: 2px solid black;
 		max-width: 100%;
 	}

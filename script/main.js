@@ -33,7 +33,8 @@ function calculateResult() {
 		(right - left) * 10 / (left + right) : 0;
 	let y = up + down !== 0 ?
 		(up - down) * 10 / (up + down) : 0;
-	
+
+	Grid.clear();
 	Grid.drawGrid();
 	Grid.drawPosition(x, y);
 }
@@ -42,23 +43,6 @@ function answerQuestion(question, answer) {
 	console.log("Answering Question");
 	const questionDiv = document.getElementById("q" + question);
 	questionDiv.style.backgroundColor = "#88dd88";
-
-	const answers = document.getElementById("q" + question + "f").elements;
-	for(const inputIndex in answers) {
-		console.log(inputIndex);
-	}
-
-	/* THIS NEEDS TO LOOP THROUGH ALL RADIO ELEMENTS REGARDLESS OF SIZE */
-	/*
-	for(let index = 0; index < 4; ++index) {
-		let label = document.getElementById("q" + question + "a" + answer + "_label");
-		if(index === answer) {
-			label.style.background = "#bbf";
-		} else {
-			label.style.background = "#ffffff";
-		}
-	}
-	*/
 	calculateResult();
 }
 
