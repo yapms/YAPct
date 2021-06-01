@@ -38,14 +38,17 @@ export default class Grid {
 
 	static drawPosition(x, y) {
 		console.log("Draw Position");
-		x += 10;
+		//x += 10;
 		y *= -1;
-		y += 10;
+		//y += 10;
 		Grid.ctx.fillStyle = Grid.positionColor;
 		Grid.ctx.lineWidth = Grid.positionWidth;
 		Grid.ctx.beginPath();
-		Grid.ctx.arc(x * (Grid.width / 20) * Grid.shrink, y * (Grid.height / 20) * Grid.shrink, 
-			(Grid.width/20) / Grid.positionSize, 0,
+		Grid.ctx.arc(
+			x * (Grid.width / 20) * Grid.shrink, 
+			y * (Grid.height / 20) * Grid.shrink, 
+			(Grid.width/20) / Grid.positionSize,
+			0,
 			2 * Math.PI);
 		Grid.ctx.stroke();
 		Grid.ctx.fill();

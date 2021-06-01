@@ -34,6 +34,7 @@ function calculateResult() {
 	let y = up + down !== 0 ?
 		(up - down) * 10 / (up + down) : 0;
 
+	console.log("X: " + x + " Y: " + y);
 	Grid.clear();
 	Grid.drawGrid();
 	Grid.drawPosition(x, y);

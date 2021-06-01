@@ -3,7 +3,7 @@
 	"answers": [{
 		"text": "Strongly Agree",
 		"economy": -1,
-		"social": 0.5
+		"social": -0.5
 	}, {
 		"text": "Agree",
 		"economy": -0.5,
@@ -22,7 +22,7 @@
 	"answers": [{
 		"text": "I kinda agree",
 		"economy": -1,
-		"social": 0.5
+		"social": -0.5
 	}, {
 		"text": "Sure",
 		"economy": -0.5,
@@ -41,7 +41,7 @@
 	"answers": [{
 		"text": "Strongly Agree",
 		"economy": -1,
-		"social": 0.5
+		"social": -0.5
 	}, {
 		"text": "Agree",
 		"economy": -0.5,
@@ -60,7 +60,7 @@
 	"answers": [{
 		"text": "Strongly Agree",
 		"economy": -1,
-		"social": 0.5
+		"social": -0.5
 	}, {
 		"text": "Agree",
 		"economy": -0.5,
