@@ -1,5 +1,74 @@
 {"questions": [{
-	"text": "Question 1",
+	"text": "Oppression by corporations is more of a concern than oppression by governments.",
+	"answers": [{
+		"text": "Strongly Agree",
+		"economy": -1,
+		"social": -0
+	}, {
+		"text": "Agree",
+		"economy": -0.5,
+		"social": 0	
+	}, {
+		"text": "Neutral/Unsure",
+		"economy": 0,
+		"social": 0	
+	}, {
+		"text": "Disagree",
+		"economy": 0.5,
+		"social": 0	
+	}, {
+		"text": "Strongly Disagree",
+		"economy": 0.6,
+		"social": 0	
+	}]
+}, {
+	"text": "It is necessary for the government to intervene in the economy to protect consumers.",
+	"answers": [{
+		"text": "Strongly Agree",
+		"economy": -1,
+		"social": 0
+	}, {
+		"text": "Agree",
+		"economy": -0.5,
+		"social": 0	
+	}, {
+		"text": "Neutral/Unsure",
+		"economy": 0,
+		"social": 0	
+	}, {
+		"text": "Disagree",
+		"economy": 0.5,
+		"social": 0	
+	}, {
+		"text": "Strongly Disagree",
+		"economy": 1,
+		"social": 0	
+	}]
+}, {
+	"text": "The freer the markets, the freer the people.",
+	"answers": [{
+		"text": "Strongly Agree",
+		"economy": 1,
+		"social": 0
+	}, {
+		"text": "Agree",
+		"economy": 0.5,
+		"social": 0	
+	}, {
+		"text": "Neutral/Unsure",
+		"economy": 0,
+		"social": 0	
+	}, {
+		"text": "Disagree",
+		"economy": -0.5,
+		"social": 0	
+	}, {
+		"text": "Strongly Disagree",
+		"economy": -1,
+		"social": 0	
+	}]
+}, {
+	"text": "Quality education is a right of all people",
 	"answers": [{
 		"text": "Strongly Agree",
 		"economy": -1,
@@ -9,69 +78,62 @@
 		"economy": -0.5,
 		"social": 0	
 	}, {
-		"text": "Disagree",
+		"text": "Neutral/Unsure",
 		"economy": 0,
+		"social": 0	
+	}, {
+		"text": "Disagree",
+		"economy": 0.5,
 		"social": 0.5	
 	}, {
 		"text": "Strongly Disagree",
-		"economy": 0.5,
+		"economy": 1,
 		"social": 1	
 	}]
 }, {
-	"text": "Question 2",
-	"answers": [{
-		"text": "I kinda agree",
-		"economy": -1,
-		"social": -0.5
-	}, {
-		"text": "Sure",
-		"economy": -0.5,
-		"social": 0	
-	}, {
-		"text": "Nooooo way",
-		"economy": 0,
-		"social": 0.5	
-	}, {
-		"text": "Heck no!",
-		"economy": 0.5,
-		"social": 1	
-	}]
-}, {
-	"text": "Question 3",
+	"text": "My nation is great",
 	"answers": [{
 		"text": "Strongly Agree",
-		"economy": -1,
-		"social": -0.5
+		"economy": 0,
+		"social": 0.75
 	}, {
 		"text": "Agree",
-		"economy": -0.5,
+		"economy": 0,
+		"social": 0.5	
+	}, {
+		"text": "Neutral/Unsure",
+		"economy": 0,
 		"social": 0	
 	}, {
 		"text": "Disagree",
 		"economy": 0,
-		"social": 0.5	
+		"social": -0.25	
 	}, {
 		"text": "Strongly Disagree",
-		"economy": 0.5,
-		"social": 1	
+		"economy": 0,
+		"social": -0.75	
 	}]
 }, {
-	"text": "Question 4",
+	"text": "Even when protesting an authoritarian government, violence is not acceptable.",
 	"answers": [{
 		"text": "Strongly Agree",
-		"economy": -1,
-		"social": -0.5
+		"economy": 0,
+		"social": 0.25
 	}, {
 		"text": "Agree",
-		"economy": -0.5,
+		"economy": 0,
+		"social": 0.1	
+	}, {
+		"text": "Neutral/Unsure",
+		"economy": 0,
 		"social": 0	
 	}, {
 		"text": "Disagree",
 		"economy": 0,
-		"social": 0.5	
+		"social": -0.1	
 	}, {
 		"text": "Strongly Disagree",
-		"economy": 0.5,
-		"social": 1	
+		"economy": 0,
+		"social": -0.25	
 	}]
 }]}

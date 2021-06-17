@@ -1,15 +1,12 @@
 import Grid from "./Grid.js";
 
-const answers = ["Strongly Agree", "Agree", "Disagree", "Strongly Disagree"];
-
 function calculateResult() {
 	console.log("Calculating Results");
 	let left = 0, right = 0, up = 0, down = 0;
 	const question_forms = document.getElementsByClassName("question_form");
-	const length = question_forms.length;
-	for(let index = 0; index < length; ++index) {
-		const form = question_forms[index];
-		for(let answer_index = 0; answer_index < 4; ++answer_index) {
+	for(let question_index = 0; question_index < question_forms.length; ++question_index) {
+		const form = question_forms[question_index];
+		for(let answer_index = 0; answer_index < form.length; ++answer_index) {
 			const input = form.childNodes[answer_index * 2];
 			if(input.checked === true) {
 				const social = parseFloat(input.getAttribute("social"));

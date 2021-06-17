@@ -48,14 +48,14 @@ body {
 
 @keyframes shake {
 	0% { transform: rotate(0deg); }
-	25% { transform: rotate(10deg); }
+	25% { transform: rotate(12deg); }
 	50% { transform: rotate(0deg); }
-	75% { transform: rotate(-10deg); }
+	75% { transform: rotate(-12deg); }
 	100% { transform: rotate(0deg); }
 }
 
 #github:hover {
-	animation: shake 0.5s;
+	animation: shake 0.6s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 }
@@ -72,6 +72,7 @@ body {
 	flex-grow: 1;
 	align-self: center;
 	height: 100%;
+	width: 50%;
 }
 
 #compass {
@@ -142,11 +143,7 @@ body {
 
 	#compass_container {
 		flex-shrink: 1;
-	}
-
-	#compass {
-		height: 95%;
-		width: 95%;
+		height: 40%;
 	}
 	
 	#questions {
