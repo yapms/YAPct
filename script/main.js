@@ -105,10 +105,18 @@ function loadQuestions() {
 	});
 }
 
+function startEventListeners() {
+	const compassContainer = document.getElementById("compass_container");
+	compassContainer.addEventListener("click", function() {
+		compassContainer.style.height = "90%";
+	}, {passive: true});
+}
+
 function main() {
 	Grid.initialize();
 	Grid.drawGrid();
 	loadQuestions();
+	startEventListeners();
 }
 
 main();
